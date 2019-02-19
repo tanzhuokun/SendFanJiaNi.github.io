@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>送给大明糊涂蛋！</title>
+
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<audio  autoplay="autoplay" controls style="display: none;">
+  <source src="music/what for.mp3" type="audio/ogg">
+ 
+</audio>
+<div id="bless" >佳妮，元宵节快乐！！！！</div>
+<div id="img"><img  id="img1" src="img/yyy.jpeg"/></div>
+<script type="text/javascript">
+	
+            var maxtime = 60 ; //一个小时，按秒计算，自己调整!   
+            function CountDown() {
+                if (maxtime >= 0) {
+                    minutes = Math.floor(maxtime / 60);
+                    seconds = Math.floor(maxtime % 60);
+                    if (maxtime == 55){
+                    	document.getElementById('bless').style.color="red";
+                    	document.getElementById('bless').innerHTML="暴富，暴富！"   
+                    	 document.getElementById('img1').src = "img/qunzi.jpg";
+                    	  document.getElementById('img1').height=800+"px"
+                    }
+                        --maxtime;
+                        
+                if(maxtime == 49){
+                	document.getElementById('bless').style.color="yellow";
+                    	document.getElementById('bless').innerHTML="开心，开心！"  
+                    	 document.getElementById('img1').src = "img/pig.jpeg";
+                    	
+                }
+                 if(maxtime == 41){
+                	document.getElementById('bless').style.color="white";
+                    	document.getElementById('bless').innerHTML="加油，加油！"   
+                    	 document.getElementById('img1').src = "img/water.jpg";
+                    	  document.getElementById('img1').height=800+"px"
+                    	 
+                    	
+                }
+                  if(maxtime == 35){
+                	document.getElementById('bless').style.color="yellow";
+                    	document.getElementById('bless').innerHTML="你快递到了！" 
+                    	 document.getElementById('img1').src = "img/face.jpeg";
+                    	
+                }
+                  if(maxtime == 29){
+                	document.getElementById('bless').style.color="cyan";
+                    	document.getElementById('bless').innerHTML="嗯哼，还行吧！"     
+                }
+                  if(maxtime == 20){
+                	document.getElementById('bless').style.color="yellow";
+                    	document.getElementById('bless').innerHTML="告诉你个好消息，下下星期开学！"  
+                    	 document.getElementById('img1').src = "img/pig.jpeg";
+                    	
+                }
+               if(maxtime == 0){
+                    clearInterval(bless);
+                    alert("要开心、快乐哦！")
+                }
+            }
+                }
+//          CountDown()
+       bless=  setInterval("CountDown()", 1000);    
+       
+       document.getElementById('img').onclick = function(){
+       	alert("ahh,手点击图片了哈")
+       	alert("我没放置其他内容，嘤嘤语")
+       	
+       }
+</script>
+	
+<canvas id="canvas"></canvas>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
